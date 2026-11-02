@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Портфолио веб-разработчика и дизайнера">
+<title>Веб-разработчик & Дизайнер — Портфолио</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:#0a0a0a;color:#f4f4f5;font-family:'Nunito',sans-serif}::selection{background:#00d4ff55;color:white}
+.grid-bg{background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(#000,transparent 92%)}
+.hero-bg{background:radial-gradient(ellipse at 75% 25%,#00d4ff20,transparent 38%),radial-gradient(ellipse at 20% 85%,#8b5cf620,transparent 42%),linear-gradient(135deg,#111,#090909)}
+.accent{background:linear-gradient(100deg,#00d4ff,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}.eyebrow{color:#00d4ff;letter-spacing:.22em;text-transform:uppercase}
+.card{background:linear-gradient(145deg,#1d1d1d,#111);border:1px solid #333;transition:transform .3s,border-color .3s,box-shadow .3s}.card:hover{transform:translateY(-5px);border-color:#00d4ff99;box-shadow:0 18px 50px #00d4ff19,0 0 24px #8b5cf614}
+.tag{border:1px solid #34343a;background:#ffffff08;color:#b8bdc7}
+.strict-nav { font-family: 'Inter', sans-serif; }
+.navlink{color:#a1a1aa;transition:color .2s;font-weight:500;display:inline-flex;align-items:center}.navlink:hover{color:#00d4ff}
+
+/* Оптимизированный, мягкий серебристо-неоновый блик (-50% яркости/свечения и плавный GPU-трансформ) */
+.cta-silver-neon {
+  position: relative;
+  background: #151b26;
+  border: 1px solid rgba(226, 232, 240, 0.25);
+  color: #f8fafc;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1), inset 0 0 8px rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.cta-silver-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(0, 212, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.08) 60%,
+    transparent 100%
+  );
+  animation: softSilverGlow 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.cta-silver-neon:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.25), 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes softSilverGlow {
+  0%, 20% { transform: translateX(0); }
+  60%, 100% { transform: translateX(200%); }
+}
+
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.fade.visible{opacity:1;transform:none}
+.social{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid #35353b;border-radius:14px;background:#151515;color:#c4c4cc;transition:.25s}.social:hover{color:#00d4ff;border-color:#00d4ff;transform:translateY(-3px)}
+h1, h2, h3, .rounded-headline {font-family:'Comfortaa', cursive, sans-serif;}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}.fade{opacity:1;transform:none}}
+</style>
+<style>
+  /* Принудительное затемнение зеленого цвета */
+  .text-brand { color: #65a30d !important; }
+  .bg-brand { background-color: #65a30d !important; }
+  .border-brand { border-color: #65a30d !important; }
+  .hover\:text-brand:hover { color: #65a30d !important; }
+  .hover\:border-brand:hover { border-color: #65a30d !important; }
+  .hover\:bg-brand:hover { background-color: #65a30d !important; }
+  .selection\:bg-brand::selection { background-color: #65a30d !important; }
+  .group:hover .group-hover\:text-brand { color: #65a30d !important; }
+  .group:hover .group-hover\:border-brand { border-color: #65a30d !important; }
+</style>
+</head>
+</head>
+<body>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl">
+<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
+<a href="#top" class="strict-nav inline-flex items-center gap-2 text-[11px] sm:text-[13px] font-semibold tracking-wide transition hover:opacity-80">
+  <span class="h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+  <span class="text-zinc-200">Веб-разработчик <span class="text-zinc-500 font-normal">&</span> Дизайнер</span>
+</a>
+<nav aria-label="Основная навигация" class="strict-nav flex items-center gap-6 text-xs sm:gap-8 sm:text-sm">
+  <a class="navlink leading-none" href="#projects">Проекты</a>
+  <a class="navlink leading-none" href="#about">Обо мне</a>
+  <a class="navlink leading-none" href="#contacts">Контакты</a>
+</nav>
+</div></header>
+<main id="top">
+<section class="hero-bg relative flex min-h-[92vh] items-center overflow-hidden px-5 pb-20 pt-32"><div class="grid-bg pointer-events-none absolute inset-0"></div><div class="pointer-events-none absolute -right-20 top-28 h-72 w-72 rounded-full border border-cyan-300/10"></div><div class="relative mx-auto w-full max-w-7xl">
+<div class="fade max-w-4xl"><p class="eyebrow mb-6 text-xs font-semibold">Портфолио · 2026</p><h1 class="rounded-headline text-4xl font-bold leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl">Создаю современные <span class="accent">веб-решения</span></h1><p class="mt-8 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">Быстрая разработка сайтов и веб-приложений с помощью современных инструментов</p><a href="#projects" class="cta-silver-neon mt-10 inline-flex items-center gap-2.5 rounded-xl px-6 py-4 text-sm font-bold tracking-wide">Посмотреть проекты <i data-lucide="arrow-down-right" class="w-4 h-4 text-cyan-300"></i></a></div>
+<div class="fade mt-20 flex items-center gap-4 text-xs uppercase tracking-[.24em] text-zinc-600"><span class="h-px w-12 bg-cyan-400/70"></span> Идея · Код · Запуск</div></div></section>
+<section id="projects" class="mx-auto max-w-7xl px-5 py-28 lg:px-8">
+<div class="fade mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+  <div>
+    <p class="eyebrow mb-3 text-xs font-semibold">Избранные работы / 01—05</p>
+    <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Мои проекты<span class="accent">.</span></h2>
+  </div>
+  <p class="max-w-sm text-sm leading-7 text-zinc-500">Практичные цифровые продукты — от концепции и интерфейса до публикации.</p>
+</div>
+<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+
+<!-- Проект 1: Сайт абитуриентов -->
+<article class="card fade flex min-h-[390px] flex-col rounded-2xl p-7">
+  <div class="mb-8 flex items-center justify-between">
+    <span class="eyebrow text-[10px] font-semibold">Проект / 01</span>
+    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.05] border border-white/10 text-zinc-400 transition-colors group-hover:border-cyan-400 group-hover:text-cyan-400">
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+  </div>
+  <h3 class="text-2xl font-semibold">Сайт абитуриентов колледжа</h3>
+  <p class="mt-4 flex-1 text-sm leading-7 text-zinc-400">Адаптивный лендинг с тёмной темой, слайдером специальностей и формой заявки, интегрированной с Telegram-ботом</p>
+  <div class="mt-7 text-xs leading-6 text-zinc-300 font-medium bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5">
+    <span class="text-cyan-400 font-semibold block mb-1">Какую задачу решает:</span> Быстрый сбор заявок от абитуриентов и презентация учебных направлений через удобный мобильный интерфейс.
+  </div>
+  <a href="https://klubinandrey-bit.github.io/abitur/" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition-colors">
+    Посмотреть проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</article>
+
+<!-- Проект 2: Сайт VASILIEV -->
+<article class="card fade flex min-h-[390px] flex-col rounded-2xl p-7">
+  <div class="mb-8 flex items-center justify-between">
+    <span class="eyebrow text-[10px] font-semibold">Проект / 02</span>
+    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.05] border border-white/10 text-zinc-400 transition-colors group-hover:border-cyan-400 group-hover:text-cyan-400">
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+  </div>
+  <h3 class="text-2xl font-semibold">Промо-сайт для рэпера VASILIEV</h3>
+  <p class="mt-4 flex-1 text-sm leading-7 text-zinc-400">Атмосферный одностраничный сайт с параллакс-эффектами, анимациями на Canvas и встроенным аудиоплеером</p>
+  <div class="mt-7 text-xs leading-6 text-zinc-300 font-medium bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5">
+    <span class="text-cyan-400 font-semibold block mb-1">Какую задачу решает:</span> Создание сильного цифрового имиджа артиста и презентация нового музыкального альбома для фанатов.
+  </div>
+  <a href="https://klubinandrey-bit.github.io/vasiliev/" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition-colors">
+    Посмотреть проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</article>
+
+<!-- Проект 3: Сайт олимпиад -->
+<article class="card fade flex min-h-[390px] flex-col rounded-2xl p-7">
+  <div class="mb-8 flex items-center justify-between">
+    <span class="eyebrow text-[10px] font-semibold">Проект / 03</span>
+    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.05] border border-white/10 text-zinc-400 transition-colors group-hover:border-cyan-400 group-hover:text-cyan-400">
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+  </div>
+  <h3 class="text-2xl font-semibold">Сайт олимпиад ВКМиС</h3>
+  <p class="mt-4 flex-1 text-sm leading-7 text-zinc-400">Многостраничный сайт для проведения профессиональных конкурсов и олимпиад с навигацией по разделам и адаптивным меню</p>
+  <div class="mt-7 text-xs leading-6 text-zinc-300 font-medium bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5">
+    <span class="text-cyan-400 font-semibold block mb-1">Какую задачу решает:</span> Информирование студентов о предстоящих конкурсах и удобный доступ к расписанию мероприятий.
+  </div>
+  <a href="https://klubinandrey-bit.github.io/vkmis-olymp/" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition-colors">
+    Посмотреть проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</article>
+
+<!-- Проект 4: Каталог товаров (Коммерческое демо) -->
+<article class="card fade flex min-h-[390px] flex-col rounded-2xl p-7 md:col-span-2 xl:col-span-1">
+  <div class="mb-8 flex items-center justify-between">
+    <span class="eyebrow text-[10px] font-semibold">Проект / 04</span>
+    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.05] border border-white/10 text-zinc-400 transition-colors group-hover:border-cyan-400 group-hover:text-cyan-400">
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+  </div>
+  <h3 class="text-2xl font-semibold">Каталог товаров с переходом в мессенджеры</h3>
+  <p class="mt-4 flex-1 text-sm leading-7 text-zinc-400">Карточки товаров с фото, ценами и описаниями. Поиск, категории, фильтры и отдельные страницы товаров. Кнопка «Узнать о товаре» формирует сообщение в WhatsApp или Telegram. Без корзины и оплаты.</p>
+  <div class="mt-7 text-xs leading-6 text-zinc-300 font-medium bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5">
+    <span class="text-cyan-400 font-semibold block mb-1">Какую задачу решает:</span> Витрина товаров с быстрым переходом к обсуждению покупки в мессенджере, без сложной интеграции интернет-магазина.
+  </div>
+  <a href="#" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition-colors">
+    Посмотреть проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</article>
+
+<!-- Проект 5: Сайт услуг с записью (Коммерческое демо) -->
+<article class="card fade flex min-h-[390px] flex-col rounded-2xl p-7">
+  <div class="mb-8 flex items-center justify-between">
+    <span class="eyebrow text-[10px] font-semibold">Проект / 05</span>
+    <div class="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.05] border border-white/10 text-zinc-400 transition-colors group-hover:border-cyan-400 group-hover:text-cyan-400">
+      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+    </div>
+  </div>
+  <h3 class="text-2xl font-semibold">Сайт услуг с записью в мессенджеры</h3>
+  <p class="mt-4 flex-1 text-sm leading-7 text-zinc-400">Перечень услуг с ценами и продолжительностью. Информация о специалистах, фото работ, адрес и график. Выбор услуги, даты и времени. Кнопки WhatsApp, Telegram и MAX формируют готовое сообщение с данными записи для ручного подтверждения владельцем.</p>
+  <div class="mt-7 text-xs leading-6 text-zinc-300 font-medium bg-white/[0.03] border border-white/[0.06] rounded-xl p-3.5">
+    <span class="text-cyan-400 font-semibold block mb-1">Какую задачу решает:</span> Упрощает запись на услуги без сложных систем бронирования. Клиент отправляет запрос, а владелец подтверждает время вручную.
+  </div>
+  <a href="#" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-white transition-colors">
+    Посмотреть проект <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</article>
+
+</div></section>
+<section id="about" class="relative overflow-hidden border-y border-white/10 bg-[#101010] px-5 py-28"><div class="pointer-events-none absolute inset-0 opacity-40" style="background-image:radial-gradient(#454545 .7px,transparent .7px);background-size:18px 18px"></div><div class="relative mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.9fr_1.1fr]">
+<div class="fade"><p class="eyebrow mb-3 text-xs font-semibold">Обо мне</p><h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Кто я такой<span class="accent">.</span></h2></div>
+<div class="fade"><p class="text-lg leading-9 text-zinc-300">Фокусируюсь на создании удобных, быстрых и конверсионных веб-решений под ключ. Помогаю бизнесу и экспертам запустить продающий сайт или сервис без долгих согласований и раздутых бюджетов. Всегда на связи, глубоко погружаюсь в задачу и сдаю проекты точно в срок.</p><div class="mt-10"><h3 class="mb-5 text-xs font-semibold uppercase tracking-[.2em] text-zinc-500">Инструменты и навыки</h3><div class="flex flex-wrap gap-2.5"><span class="tag rounded-lg px-3 py-2 text-sm">HTML</span><span class="tag rounded-lg px-3 py-2 text-sm">CSS</span><span class="tag rounded-lg px-3 py-2 text-sm">Tailwind</span><span class="tag rounded-lg px-3 py-2 text-sm">JavaScript</span><span class="tag rounded-lg px-3 py-2 text-sm">React</span><span class="tag rounded-lg px-3 py-2 text-sm">Vite</span><span class="tag rounded-lg px-3 py-2 text-sm">Cloudflare Pages</span><span class="tag rounded-lg px-3 py-2 text-sm">Telegram Bot API</span><span class="tag rounded-lg px-3 py-2 text-sm">UI/UX Design</span></div></div></div>
+</div></section>
+<section id="contacts" class="mx-auto max-w-7xl px-5 py-28 lg:px-8"><div class="grid gap-12 lg:grid-cols-2 lg:items-end"><div class="fade"><p class="eyebrow mb-3 text-xs font-semibold">Открыт к интересным задачам</p><h2 class="text-4xl font-semibold tracking-tight sm:text-6xl">Связаться <span class="accent">со мной</span></h2><p class="mt-6 max-w-md text-base leading-8 text-zinc-400">Есть идея или проект? Напишите мне — обсудим задачу и найдём подходящее решение.</p></div>
+<div class="fade lg:justify-self-end"><div class="flex gap-3">
+<a class="social" href="#" aria-label="ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M3 7h3c.2 2 1.8 5.4 3 5.4.5 0 .5-1.7.4-3.1-.1-1.1-.7-1.3-1.2-1.5.8-.8 2.1-.8 3.4-.8 1.1 0 1.5.4 1.5 1.3v4c0 .5.2.7.5.7.9 0 2.5-2.4 3.4-5.9H21c-.4 2-1.5 4.1-2.6 5.5-.5.7-.5 1 .1 1.6 1.1 1 2.4 2.6 3.2 4.1h-3.6c-.7-1.1-2-2.7-3-3.2-.8-.4-1.2-.1-1.2.8v2.4H12C6.7 18.3 3.5 13.8 3 7z"/></svg></a>
+<a class="social" href="#" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M21.8 4.2 18.5 20c-.2 1.1-.8 1.4-1.7.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.8-8c.4-.4-.1-.6-.6-.2L6.5 14.2 1.9 12.8c-1-.3-1-1 .2-1.5L20 4.1c.8-.3 1.5.2 1.8.1z"/></svg></a>
+<a class="social" href="#" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.6-1.2-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9z"/></svg></a>
+</div><a href="mailto:klubinandrej700@gmail.com" class="mt-6 inline-block text-lg text-zinc-200 transition hover:text-cyan-300">klubinandrej700@gmail.com</a><p class="mt-2 text-xs text-zinc-600">Электронная почта</p></div></div></section>
+</main>
+<footer class="border-t border-white/10 px-5 py-7"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-xs text-zinc-500 sm:flex-row sm:items-center"><span>© 2026 Сделано с помощью современных инструментов</span><span class="uppercase tracking-[.18em]">Designed & built with intent</span></div></footer>
+<script>
+lucide.createIcons();
+const fadeElements=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver((entries,obs)=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}}),{threshold:.12});
+ fadeElements.forEach(el=>observer.observe(el));
+}else{fadeElements.forEach(el=>el.classList.add('visible'))}
+</script>
+</body></html>
+
+
+
+
+
+
