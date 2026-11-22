@@ -12,80 +12,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:#0a0a0a;color:#f4f4f5;font-family:'Inter',sans-serif}::selection{background:#00d4ff55;color:white}
-.grid-bg{background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 65%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 65%,transparent 100%)}
-.hero-bg{background:linear-gradient(180deg,#070910 0%,#06070a 100%)}
-@keyframes floatLight{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(16px,-18px,0) scale(1.12)}}
-.hero-light-cyan{background:radial-gradient(circle,rgba(0,212,255,.32) 0%,rgba(0,212,255,.08) 45%,transparent 72%);animation:floatLight 7s ease-in-out infinite}
-.hero-light-violet{background:radial-gradient(circle,rgba(139,92,246,.32) 0%,rgba(139,92,246,.08) 45%,transparent 72%);animation:floatLight 9s ease-in-out infinite reverse}
-.noise-bg{background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 0);background-size:20px 20px}
-.accent{background:linear-gradient(100deg,#00d4ff,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}.eyebrow{color:#00d4ff;letter-spacing:.22em;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
-.card{background:linear-gradient(165deg,rgba(24,27,36,.95) 0%,rgba(14,16,22,.98) 100%);border:1px solid rgba(255,255,255,.08);border-top-color:rgba(255,255,255,.16);contain:content;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.5);box-shadow:0 20px 50px -12px rgba(0,212,255,.2)}.task-box{border-left:2px solid rgba(34,211,238,.75);background:linear-gradient(90deg,rgba(34,211,238,.06),transparent);padding:10px 14px;border-radius:0 12px 12px 0}.task-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#22d3ee;display:block;margin-bottom:4px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;background:#090c12;color:#f4f4f5;font-family:'Inter',sans-serif}
+body{margin:0;overflow-x:hidden;background-color:#090c12;background-image:radial-gradient(ellipse 85% 42% at 85% 42%,rgba(0,212,255,.14),transparent 65%),radial-gradient(ellipse 80% 42% at 15% 78%,rgba(139,92,246,.15),transparent 65%),linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:100% 100%,100% 100%,48px 48px,48px 48px}
+::selection{background:#00d4ff55;color:#fff}
+.hero-bg{background:radial-gradient(ellipse 75% 60% at 80% 18%,rgba(0,212,255,.32),transparent 62%),radial-gradient(ellipse 70% 60% at 15% 82%,rgba(139,92,246,.32),transparent 62%),linear-gradient(180deg,#080d16 0%,#090c12 100%)}
+.accent{background:linear-gradient(100deg,#00d4ff,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:#00d4ff;letter-spacing:.22em;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.card{background:linear-gradient(165deg,rgba(24,27,36,.95) 0%,rgba(14,16,22,.98) 100%);border:1px solid rgba(255,255,255,.08);border-top-color:rgba(255,255,255,.16);contain:content;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.5);box-shadow:0 20px 50px -12px rgba(0,212,255,.2)}
+.task-box{border-left:2px solid rgba(34,211,238,.75);background:linear-gradient(90deg,rgba(34,211,238,.06),transparent);padding:10px 14px;border-radius:0 12px 12px 0}
+.task-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#22d3ee;display:block;margin-bottom:4px}
 .tag{border:1px solid #34343a;background:#ffffff08;color:#b8bdc7}
-.strict-nav { font-family: 'Inter', sans-serif; }
-.navlink{color:#a1a1aa;transition:color .2s;font-weight:500;display:inline-flex;align-items:center}.navlink:hover{color:#00d4ff}
-
-/* Оптимизированный, мягкий серебристо-неоновый блик (-50% яркости/свечения и плавный GPU-трансформ) */
-.cta-silver-neon {
-  position: relative;
-  background: #151b26;
-  border: 1px solid rgba(226, 232, 240, 0.25);
-  color: #f8fafc;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1), inset 0 0 8px rgba(255, 255, 255, 0.08);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-}
-
-.cta-silver-neon::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.08) 40%,
-    rgba(0, 212, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.08) 60%,
-    transparent 100%
-  );
-  animation: softSilverGlow 6s ease-in-out infinite;
-  will-change: transform;
-}
-
-.cta-silver-neon:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 212, 255, 0.6);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.25), 0 0 6px rgba(255, 255, 255, 0.3);
-}
-
-@keyframes softSilverGlow {
-  0%, 20% { transform: translateX(0); }
-  60%, 100% { transform: translateX(200%); }
-}
-
-.fade{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.fade.visible{opacity:1;transform:none}
-.social{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid #35353b;border-radius:14px;background:#151515;color:#c4c4cc;transition:.25s}.social:hover{color:#00d4ff;border-color:#00d4ff;transform:translateY(-3px)}
-h1, h2, h3, .rounded-headline {font-family:'Montserrat', sans-serif; letter-spacing:-0.02em;}
+.navlink{color:#a1a1aa;transition:color .2s;font-weight:500;display:inline-flex;align-items:center}
+.navlink:hover{color:#00d4ff}
+.cta-silver-neon{position:relative;background:#151b26;border:1px solid rgba(226,232,240,.25);color:#f8fafc;overflow:hidden;box-shadow:0 0 10px rgba(0,212,255,.1),inset 0 0 8px rgba(255,255,255,.08);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;will-change:transform}
+.cta-silver-neon::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.08) 40%,rgba(0,212,255,.15) 50%,rgba(255,255,255,.08) 60%,transparent 100%);animation:softSilverGlow 6s ease-in-out infinite;will-change:transform}
+.cta-silver-neon:hover{transform:translateY(-2px);border-color:rgba(0,212,255,.6);box-shadow:0 0 15px rgba(0,212,255,.25),0 0 6px rgba(255,255,255,.3)}
+@keyframes softSilverGlow{0%,20%{transform:translateX(0)}60%,100%{transform:translateX(200%)}}
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.fade.visible{opacity:1;transform:none}
+.social{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid #35353b;border-radius:14px;background:#151515;color:#c4c4cc;transition:.25s}
+.social:hover{color:#00d4ff;border-color:#00d4ff;transform:translateY(-3px)}
+h1,h2,h3,.rounded-headline{font-family:'Montserrat',sans-serif;letter-spacing:-0.02em}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}.fade{opacity:1;transform:none}}
 </style>
-<style>
-  /* Принудительное затемнение зеленого цвета */
-  .text-brand { color: #65a30d !important; }
-  .bg-brand { background-color: #65a30d !important; }
-  .border-brand { border-color: #65a30d !important; }
-  .hover\:text-brand:hover { color: #65a30d !important; }
-  .hover\:border-brand:hover { border-color: #65a30d !important; }
-  .hover\:bg-brand:hover { background-color: #65a30d !important; }
-  .selection\:bg-brand::selection { background-color: #65a30d !important; }
-  .group:hover .group-hover\:text-brand { color: #65a30d !important; }
-  .group:hover .group-hover\:border-brand { border-color: #65a30d !important; }
-</style>
-<style id="bgTheme">html{background:#090c12!important}body{background-color:#090c12!important;background-image:radial-gradient(ellipse 85% 42% at 85% 42%,rgba(0,212,255,.14),transparent 65%),radial-gradient(ellipse 80% 42% at 15% 78%,rgba(139,92,246,.15),transparent 65%),linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px)!important;background-size:100% 100%,100% 100%,48px 48px,48px 48px!important}.hero-bg{background:radial-gradient(ellipse 75% 60% at 80% 18%,rgba(0,212,255,.32),transparent 62%),radial-gradient(ellipse 70% 60% at 15% 82%,rgba(139,92,246,.32),transparent 62%),linear-gradient(180deg,#080d16 0%,#090c12 100%)!important}</style>
-</head>
 </head>
 <body>
 <header class="relative z-20 px-3 pt-4 sm:px-6">
@@ -203,7 +154,7 @@ h1, h2, h3, .rounded-headline {font-family:'Montserrat', sans-serif; letter-spac
 <div class="fade lg:justify-self-end"><div class="flex gap-3">
 <a class="social" href="#" aria-label="ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M3 7h3c.2 2 1.8 5.4 3 5.4.5 0 .5-1.7.4-3.1-.1-1.1-.7-1.3-1.2-1.5.8-.8 2.1-.8 3.4-.8 1.1 0 1.5.4 1.5 1.3v4c0 .5.2.7.5.7.9 0 2.5-2.4 3.4-5.9H21c-.4 2-1.5 4.1-2.6 5.5-.5.7-.5 1 .1 1.6 1.1 1 2.4 2.6 3.2 4.1h-3.6c-.7-1.1-2-2.7-3-3.2-.8-.4-1.2-.1-1.2.8v2.4H12C6.7 18.3 3.5 13.8 3 7z"/></svg></a>
 <a class="social" href="#" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M21.8 4.2 18.5 20c-.2 1.1-.8 1.4-1.7.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.8-8c.4-.4-.1-.6-.6-.2L6.5 14.2 1.9 12.8c-1-.3-1-1 .2-1.5L20 4.1c.8-.3 1.5.2 1.8.1z"/></svg></a>
-<a class="social" href="#" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.6-1.2-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9z"/></svg></a>
+<a class="social" href="https://://github.comklubinandrey-bit" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.6-1.2-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9z"/></svg></a>
 </div><a href="mailto:klubinandrej700@gmail.com" class="mt-6 inline-block text-lg text-zinc-200 transition hover:text-cyan-300">klubinandrej700@gmail.com</a><p class="mt-2 text-xs text-zinc-600">Электронная почта</p></div></div></section>
 </main>
 <footer class="border-t border-white/10 px-5 py-7"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-xs text-zinc-500 sm:flex-row sm:items-center"><span>© 2026 Сделано с помощью современных инструментов</span><span class="uppercase tracking-[.18em]">Designed & built with intent</span></div></footer>
@@ -264,9 +215,3 @@ if('IntersectionObserver' in window){
 })();
 </script>
 </body></html>
-
-
-
-
-
-
